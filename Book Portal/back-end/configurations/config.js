@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('books_portal', 'anonymous', '123456', {dialect: 'mysql'});
+const sequelize = new Sequelize('books_portal', 'root', '123456', {host: "127.0.0.1", port:3306, dialect: 'mysql'});
 
 module.exports = sequelize;

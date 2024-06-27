@@ -22,10 +22,19 @@ router.post('/addBook', (req, res)=>{
 
 router.get('/getBooks', (req, res)=>{
         /* implement the getBooks route from scratch */
+        const books = Book.findAll({where: {}}).then((books)=>{
+                return res.send(books);
+        });
 });
 
 router.get('/getBook/:id', (req, res)=>{
        /* implement the getBook route from scratch */
+       Book.findOne({where: {ID: req.params.id}}).then((book)=>{
+        if (book != null) {
+                return res.send(book)
+        }
+        else {return res.json(404, {error: 1, msg: "book not found"}).catch((err)=>{return res.status(404).send(err);});}
+       })
 });
 
 router.patch('/changeBook/:id', (req, res)=>{

@@ -1,0 +1,11 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.btn btn-success pull-right{
+    margin: 0px 250px;
+}

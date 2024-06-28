@@ -1,7 +1,13 @@
 <div class="card" style="width:400px">
   <img class="card-img-top" [src]="book.image" alt="Card image" style="width:100%">
   <div class="card-body">
-   
+    <h2>{{book.title}}</h2>
+    <h3>{{book.author}}</h3>
+    <p>{{book.category}}</p>
+    <p>{{book.contact}}</p>
+    <p>{{book.phone}}</p>
+    <p>{{book.email}}</p>
+    <p>{{book.abstract}}</p>
    
     <input type="text" #f >
     <button (click)="change_book(f, book.ID)" class="btn btn-primary">{{book.status == 'available'?'Borrow':'Return'}}</button>
